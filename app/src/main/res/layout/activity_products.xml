@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:scrollbars="vertical"
+    android:layout_margin="4dp">
+
+
+    <RelativeLayout
+        android:layout_marginTop="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/itemName"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/productName"/>
+
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_below="@id/itemName"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/moyki"
+            android:layout_margin="4dp"/>
+
+        <TextView
+            android:layout_below="@id/itemName"
+            android:id="@+id/productsTextView"
+            android:layout_toRightOf="@id/productImage"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="@string/productDescription"
+            />
+
+
+        <TextView
+            android:id="@+id/price"
+
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ProductPrice"
+            android:layout_below="@id/productImage"/>
+
+        <TextView
+            android:id="@+id/priceTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/productImage"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@id/price"
+            android:text="0"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_toRightOf="@id/priceTotal"
+            android:layout_below="@id/productImage"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textStyle="bold"/>
+
+        <Button
+            android:onClick="minusOnClick"
+            android:layout_below="@id/productImage"
+            android:layout_toRightOf="@id/quantity"
+            android:id="@+id/minus_button"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="100dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="-"/>
+
+        <Button
+            android:onClick="plusOnClick"
+            android:layout_below="@id/productImage"
+            android:layout_toRightOf="@id/minus_button"
+            android:id="@+id/plus_button"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="+"/>
+
+        <Button
+            android:id="@+id/add_to_cart"
+            android:layout_below="@id/productImage"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/plus_button"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:text="купить"
+            style="bold"/>
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
