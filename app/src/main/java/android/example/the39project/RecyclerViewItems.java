@@ -1,22 +1,22 @@
 package android.example.the39project;
 
 public class RecyclerViewItems {
-    private int itemName;
-    private int price;
+    private String itemName;
+    private String productsDescription;
     private int imageView;
 
-    public RecyclerViewItems(int itemName, int price, int imageView) {
+    public RecyclerViewItems(String itemName, String productsDescription, int imageView) {
         this.itemName = itemName;
-        this.price = price;
+        this.productsDescription = productsDescription;
         this.imageView = imageView;
     }
 
-    public int getItemName() {
+    public String getItemName() {
         return itemName;
     }
 
-    public int getPrice() {
-        return price;
+    public String getPrice() {
+        return productsDescription;
     }
 
     public int getImageView() {

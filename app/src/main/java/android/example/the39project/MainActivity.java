@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
   //  Order order = new Order();
 
     private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private  RecyclerView.LayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList <RecyclerViewItems> recyclerViewItemsList = new ArrayList();
         for (int i = 0; i < 5; i++) {
-            recyclerViewItemsList.add(new RecyclerViewItems(R.id.itemName, R.id.price, R.drawable.moyki));
+            recyclerViewItemsList.add(new RecyclerViewItems("Name", "Description", R.drawable.moyki));
         }
     }
 

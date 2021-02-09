@@ -16,7 +16,7 @@ import java.util.HashMap;
 
 public class ProductsActivity extends AppCompatActivity {
     double price;
-    int qty;
+    int qty; // quantity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
